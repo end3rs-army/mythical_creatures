@@ -1,13 +1,15 @@
 class Centaur
 
 	attr_reader :name, :breed
+	attr_accessor :temperment
 
-	def initialize(name,breed)
+	def initialize(name,breed,temperment = :chill)
 		@name = name
 		@breed = breed
 		@mood = false
 		@stand = true
 		@move = 0
+		@temperment = temperment
 	end
 
 	def shoot
@@ -16,7 +18,7 @@ class Centaur
 		if @mood == true || @stand == false
 			"NO!"
 		elsif @mood == false 
-			"Twang!!!"
+			"Bang!!!"
 		end	
 	end
 
@@ -31,11 +33,15 @@ class Centaur
 	end
 
 	def cranky?
-		if @move < 3
+		if @move <= 20 && chill?
 			@mood = false
 		else
 			@mood = true
 		end
+	end
+
+	def chill?
+		@temperment == :chill
 	end
 
 	def sleep
@@ -43,7 +49,7 @@ class Centaur
 		if @stand == true
 			"NO!"
 		else
-			"Good night."
+			"Good night. Sleep tight!"
 			@move = 0
 		end
 	end
