@@ -6,12 +6,12 @@ class Werewolf
 
 		@name = name
 		@location = location
-		@form = "human"
+		@form = :human
 
 	end
 
 	def human?
-		if @form == "human"
+		if @form == :human
 			true
 		else
 			false
@@ -19,7 +19,7 @@ class Werewolf
 	end
 
 	def werewolf?
-		if @form == "werewolf"
+		if @form == :werewolf
 			true
 		else
 			false
@@ -35,15 +35,11 @@ class Werewolf
 	end
 
 	def change!
-		if @form == "human"
-			@form = "werewolf"
-		elsif @form == "werewolf"
-			@form = "human"
+		if @form == :human
+			@form = :werewolf
+		elsif @form == :werewolf
+			@form = :human
 		end
 	end
 
 end
-
-werewolf = Werewolf.new("David","London")
-werewolf.change!
-puts werewolf.human?
