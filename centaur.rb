@@ -12,7 +12,7 @@ class Centaur
 
 	def shoot
 		@move += 1
-		"Twang!!!"
+		remove_arrow_from_quiver
 	end
 
 	def run
@@ -26,11 +26,7 @@ class Centaur
 	end
 
 	def cranky?
-		if @move < 3 || @name = "Bartholomew"
-			@mood = false
-		else
-			@mood = true
-		end
+		@move > 3 || @name = "Brody"
 	end
 
 	def sleep
@@ -64,5 +60,9 @@ class Centaur
 
 	def standing?
 		@stand
+	end
+
+	def remove_arrow_from_quiver
+
 	end
 end
