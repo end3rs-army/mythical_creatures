@@ -26,7 +26,7 @@ class Centaur
 	end
 
 	def cranky?
-		@move > 3 || @name = "Brody"
+		@move > 3 || @name == "Brody"
 	end
 
 	def sleep
