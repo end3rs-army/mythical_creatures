@@ -71,10 +71,4 @@ class Centaur
 	def standing?
 		@stand
 	end
-
 end
-
-centaur = Centaur.new("George","Palomino")
-    centaur.lay_down
-    puts centaur.standing?
-    puts centaur.laying?
