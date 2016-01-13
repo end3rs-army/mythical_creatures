@@ -6,12 +6,12 @@ class Werewolf
 
 		@name = name
 		@location = location
-		@form = "human"
+		@form = "homosapien"
 
 	end
 
 	def human?
-		if @form == "human"
+		if @form == "homosapien"
 			true
 		else
 			false
@@ -35,10 +35,10 @@ class Werewolf
 	end
 
 	def change!
-		if @form == "human"
+		if @form == "homosapien"
 			@form = "werewolf"
 		elsif @form == "werewolf"
-			@form = "human"
+			@form = "homosapien"
 		end
 	end
 

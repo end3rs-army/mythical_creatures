@@ -12,12 +12,7 @@ class Centaur
 
 	def shoot
 		@move += 1
-		cranky?
-		if @mood == true || @stand == false
-			"NO!"
-		elsif @mood == false 
-			"Twang!!!"
-		end	
+		"Twang!!!"
 	end
 
 	def run
@@ -31,7 +26,7 @@ class Centaur
 	end
 
 	def cranky?
-		if @move < 3
+		if @move < 3 || @name = "Bartholomew"
 			@mood = false
 		else
 			@mood = true
@@ -43,7 +38,6 @@ class Centaur
 		if @stand == true
 			"NO!"
 		else
-			"Good night."
 			@move = 0
 		end
 	end
