@@ -1,13 +1,15 @@
 class Centaur
 
 	attr_reader :name, :breed
+	attr_accessor :arrow_count
 
-	def initialize(name,breed)
+	def initialize(name,breed,arrow_count)
 		@name = name
 		@breed = breed
 		@mood = false
 		@stand = true
 		@move = 0
+		@arrow_count = arrow_count
 	end
 
 	def shoot
