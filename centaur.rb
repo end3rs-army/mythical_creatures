@@ -6,7 +6,7 @@ class Centaur
 	def initialize(name,breed,temperment = :chill)
 		@name = name
 		@breed = breed
-		@mood = false
+		@mood = true
 		@stand = true
 		@move = 0
 		@temperment = temperment
@@ -33,11 +33,7 @@ class Centaur
 	end
 
 	def cranky?
-		if @move <= 20 && chill?
-			@mood = false
-		else
-			@mood = true
-		end
+		@move <= 20 && chill?
 	end
 
 	def chill?
